@@ -11,7 +11,7 @@ const taskList = document.getElementById('task-list');
 let allTasks = [
 ];
 
-function populate(tasks) {
+const populate = ((tasks) => {
   taskList.innerHTML = '';
 
   tasks.forEach((task) => {
@@ -55,7 +55,7 @@ function populate(tasks) {
       updateStatus(textElement, checkBox, task);
     });
   });
-}
+});
 
 taskList.addEventListener('drop', (e) => {
   const sortedTasks = allTasks.sort((a, b) => a.index - b.index);

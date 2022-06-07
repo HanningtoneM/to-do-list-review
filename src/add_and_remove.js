@@ -1,4 +1,4 @@
-function addNewTask() {
+const addNewTask = (() => {
   const taskArray = JSON.parse(localStorage.getItem('tasks'));
   const description = document.getElementById('task-description').value;
   taskArray.push({
@@ -8,9 +8,9 @@ function addNewTask() {
   });
   document.getElementById('task-description').value = '';
   localStorage.setItem('tasks', JSON.stringify(taskArray));
-}
+});
 
-function deleteTask(task) {
+const deleteTask = ((task) => {
   const taskArray = JSON.parse(localStorage.getItem('tasks'));
   const sortedTasks = taskArray.sort((a, b) => a.index - b.index);
   sortedTasks.splice(task.index - 1, 1);
@@ -18,9 +18,9 @@ function deleteTask(task) {
     task.index = index + 1;
   });
   localStorage.setItem('tasks', JSON.stringify(sortedTasks));
-}
+});
 
-function editTask(e, listItem, textElement, spanItem, allTasks, task, populate) {
+const editTask = ((e, listItem, textElement, spanItem, allTasks, task, populate) => {
   const menu = e.target;
   menu.classList.remove('fa-ellipsis-v');
   menu.classList.add('fa-trash-alt');
@@ -41,9 +41,9 @@ function editTask(e, listItem, textElement, spanItem, allTasks, task, populate) 
   });
 
   inputElement.focus();
-}
+});
 
-function clearAllCompleted() {
+const clearAllCompleted = (() => {
   const taskArray = JSON.parse(localStorage.getItem('tasks'));
   const filteredTaskArray = taskArray.filter((task) => task.completed === false);
   const sortedTasks = filteredTaskArray.sort((a, b) => a.index - b.index);
@@ -52,7 +52,7 @@ function clearAllCompleted() {
     task.index = index;
   });
   localStorage.setItem('tasks', JSON.stringify(sortedTasks));
-}
+});
 
 module.exports = {
   addNewTask, editTask, deleteTask, clearAllCompleted,
