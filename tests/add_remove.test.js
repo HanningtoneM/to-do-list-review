@@ -22,5 +22,36 @@ describe('Test Add and Remove', () => {
     expect(taskList).toHaveLength(1);
   });
 
- 
+  test('should remove tasks from list', () => {
+    document.body.innerHTML = `
+      <div>
+        <ul id="task-list">
+            
+        </ul>
+        <input id="task-description" value="something">
+          
+        </input>
+      </div>
+    `;
+
+    addNewTask();
+    addNewTask();
+    addNewTask();
+    addNewTask();
+
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    populate(tasks);
+
+    let taskList = document.querySelectorAll('#task-list li');
+    const initialLength = taskList.length;
+
+    deleteTask({ index: 1 });
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    populate(tasks);
+
+    taskList = document.querySelectorAll('#task-list li');
+
+    expect(taskList).toHaveLength(initialLength - 1);
+  });
+
 });
