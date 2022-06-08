@@ -53,5 +53,4 @@ describe('Test Add and Remove', () => {
 
     expect(taskList).toHaveLength(initialLength - 1);
   });
-
 });
