@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -78,34 +78,34 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const updateStatus = (<span class="fstat-no" title="function not covered" >(t</span>extElement, checkBox, task) =&gt; {
-  const allTasks = <span class="cstat-no" title="statement not covered" >JSON.parse(localStorage.getItem('tasks'));</span>
-  const currentTask = <span class="cstat-no" title="statement not covered" >allTasks.find(<span class="fstat-no" title="function not covered" >(t</span>) =&gt; <span class="cstat-no" title="statement not covered" >t.index === task.index)</span>;</span>
-<span class="cstat-no" title="statement not covered" >  textElement.classList.toggle('strike');</span>
-<span class="cstat-no" title="statement not covered" >  textElement.classList.toggle('text-muted');</span>
-<span class="cstat-no" title="statement not covered" >  if (checkBox.checked) {</span>
-<span class="cstat-no" title="statement not covered" >    task.completed = true;</span>
-<span class="cstat-no" title="statement not covered" >    currentTask.completed = true;</span>
+<span class="cline-any cline-yes">4x</span></td><td class="text"><pre class="prettyprint lang-js">const updateStatus = ((textElement, checkBox, task) =&gt; {
+  const allTasks = JSON.parse(localStorage.getItem('tasks'));
+  const currentTask = allTasks.find((t) =&gt; t.index === task.index);
+  textElement.classList.toggle('strike');
+  textElement.classList.toggle('text-muted');
+  if (checkBox.checked) {
+    task.completed = true;
+    currentTask.completed = true;
   } else {
-<span class="cstat-no" title="statement not covered" >    task.completed = false;</span>
-<span class="cstat-no" title="statement not covered" >    currentTask.completed = false;</span>
+    task.completed = false;
+    currentTask.completed = false;
   }
-<span class="cstat-no" title="statement not covered" >  localStorage.setItem('tasks', JSON.stringify(allTasks));</span>
+  localStorage.setItem('tasks', JSON.stringify(allTasks));
 });
 &nbsp;
 module.exports = { updateStatus };</pre></td></tr></table></pre>
@@ -115,7 +115,7 @@ module.exports = { updateStatus };</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jun 08 2022 14:59:19 GMT+0300 (East Africa Time)
+                at Thu Jun 09 2022 11:46:48 GMT+0300 (East Africa Time)
             </div>
         <script src="prettify.js"></script>
         <script>
