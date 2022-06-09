@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1654757394911" clover="3.2.0">
-  <project timestamp="1654757394912" name="All files">
+<coverage generated="1654764408363" clover="3.2.0">
+  <project timestamp="1654764408363" name="All files">
     <metrics statements="105" coveredstatements="87" conditionals="6" coveredconditionals="5" methods="23" coveredmethods="14" elements="134" coveredelements="106" complexity="0" loc="105" ncloc="105" packages="1" files="4" classes="4"/>
     <file name="add_and_remove.js" path="/home/hanningtone/Desktop/Microverse/to-do-list-review/tests/test-files/add_and_remove.js">
       <metrics statements="38" coveredstatements="38" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="10"/>

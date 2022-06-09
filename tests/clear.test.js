@@ -1,5 +1,6 @@
 const { populate } = require('./test-files/index.js');
 const { addNewTask, clearAllCompleted } = require('./test-files/add_and_remove.js');
+
 describe('Test Clear All Completed', () => {
   test('should clear all completed tasks;', () => {
     document.body.innerHTML = `
