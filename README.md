@@ -40,17 +40,28 @@ To get a local copy up follow these simple example steps.
 
 **``you@your-Pc-name:~$ cd <folder>``**
 
+3. Run
+
+   `npm install`
+4. Run
+
+    `npm install --save-dev jest`
+5. To perform Tests 
+
+Run
+
+`npm test`
 ### Prerequisites
 
 - GIT, NODE, NPM
+- Jest
 
 ## Author
 
-👤 **hanningtone Monda**
-
-- Github: [@HanningtoneM](https://github.com/HanningtoneM)
-- linkedin: [@Hanningtone Machuka](https://www.linkedin.com/in/hanningtone-machuka-58501722a)
-- Twitter: [@Hanningtone254](https://twitter.com/Hanningtone254?t=YVXXz9EZzOhR5vPi3DlHDQ&s=09)
+| 👤 Name | Github | Twitter | LinkedIn |
+|------|--------|---------|----------|
+|Waleed Amjad|[@caasperr](https://github.com/caasperr)|[@developerwaleed](https://twitter.com/developerwaleed)|[@Waleed Amjad](https://www.linkedin.com/in/waleed-amjad-51930014a/)||
+hanningtone Monda| [@HanningtoneM](https://github.com/HanningtoneM)|[@Hanningtone254](https://twitter.com/Hanningtone254?t=YVXXz9EZzOhR5vPi3DlHDQ&s=09)|[@Hanningtone Machuka](https://www.linkedin.com/in/hanningtone-machuka-58501722a)
 
 ## Credits
 
